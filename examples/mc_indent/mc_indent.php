@@ -50,6 +50,12 @@ function MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false, $indent=0)
 	{
 		//Get next character
 		$c=$s[$i];
+                // If the string dont break
+                if($first&&$i==$nb-1)
+                {
+                    // Indent
+                    $this->SetX($this->x + $indent/2);
+                }
 		if($c=="\n")
 		{
 			//Explicit line break
